@@ -8,7 +8,7 @@ Official site of brew is in [Homebrew](https://brew.sh/). Quickest way is to exe
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
 
-## Commands
+## Package Installer Commands
 ```
 $ brew --help
 
@@ -26,4 +26,27 @@ To show where brew packages are downloaded
 $ brew --cache
 
 $ brew list
+```
+
+## User Shortcut Commands
+
+* Sleep
+```
+Shift + Control + Power
+```
+* Logout with confirmation
+```
+Command + Shift + Q
+```
+* Force restart your Mac
+```
+Command + Control + Power Button
+```
+* Turn off your Mac
+```
+Command + Option + Control + Power Button
+```
+* Logout with no confirmation
+```
+Command + Shift + Option + Q
 ```
