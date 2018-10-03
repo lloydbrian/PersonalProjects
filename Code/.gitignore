@@ -1,8 +1,10 @@
+# MacOS System Files
+.DS_Store
+
 # Java binaries
 /bin/
 .settings/
 *.class
-
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
