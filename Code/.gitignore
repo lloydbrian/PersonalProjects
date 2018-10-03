@@ -1,4 +1,7 @@
 # Java binaries
+/bin/
+.settings/
+*.class
 
 
 # Byte-compiled / optimized / DLL files
