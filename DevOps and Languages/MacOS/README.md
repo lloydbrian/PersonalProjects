@@ -1,4 +1,4 @@
-# All about Homebrew
+# All about MacOS
 Use brew only on macOS. Brew is not installed by default in MacOS. You will have to install to be able to install packages conveniently. These packages are normally not in the Apple Store.
 
 ## Where to install
@@ -6,26 +6,6 @@ Official site of brew is in [Homebrew](https://brew.sh/). Quickest way is to exe
 
 ```
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-```
-
-## Package Installer Commands
-```
-$ brew --help
-
-To update homebrew package:
-$ brew update
-
-$ brew install <package/formulae>
-$ brew info <package/formulae>
-
-To upgrade all:
-$ brew upgrade
-$ brew outdated
-
-To show where brew packages are downloaded
-$ brew --cache
-
-$ brew list
 ```
 
 ## User Shortcut Commands
@@ -49,4 +29,25 @@ Command + Option + Control + Power Button
 * Logout with no confirmation
 ```
 Command + Shift + Option + Q
+```
+
+
+## Package Installer Commands
+```
+$ brew --help
+
+To update homebrew package:
+$ brew update
+
+$ brew install <package/formulae>
+$ brew info <package/formulae>
+
+To upgrade all:
+$ brew upgrade
+$ brew outdated
+
+To show where brew packages are downloaded
+$ brew --cache
+
+$ brew list
 ```
