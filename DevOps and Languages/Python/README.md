@@ -23,6 +23,12 @@ pythontutor.com
 unittest class
 ```
 
+# Strings
+```
+for pl, sc in zip(players, scores):
+    print ("Player :  %s     Score : %d" %(pl, sc))
+```
+
 # Variables and Multiple Assignment
 # Arithmetic Operators
 # Placeholder in Strings
