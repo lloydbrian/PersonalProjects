@@ -10,9 +10,13 @@ Official site of brew is in [Homebrew](https://brew.sh/). Quickest way is to exe
 
 ## User Shortcut Commands
 
+* Lock Screen
+```
+Command + Control + Q
+```
 * Sleep
 ```
-Shift + Control + Power
+Command + Option + Power Button
 ```
 * Logout with confirmation
 ```
