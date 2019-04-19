@@ -14,6 +14,8 @@ Created 4/18/2019
 Edited: Lloyd Dagoc
 """
 
+import PyCurl
+
 
 class SiteCertificate:
     """
