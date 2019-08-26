@@ -23,6 +23,82 @@ pythontutor.com
 unittest class
 ```
 
+# Encoding and Decoding in Python 2
+unicode.encode() --> bytes
+bytes.decode() --> unicode
+```
+>>> my_unicode = u"Hi \u2119\u01b4\u2602\u210c\xf8\u1f24"
+>>> type(my_unicode)
+<type 'unicode'>
+>>> my_unicode
+u'Hi \u2119\u01b4\u2602\u210c\xf8\u1f24'
+>>> len(my_unicode)
+9
+>>> my_utf8 = my_unicode.encode("utf-8")
+>>> len(my_utf8)
+19
+>>> my_utf8
+'Hi \xe2\x84\x99\xc6\xb4\xe2\x98\x82\xe2\x84\x8c\xc3\xb8\xe1\xbc\xa4'
+>>> my_utf8.decode("utf-8")
+u'Hi \u2119\u01b4\u2602\u210c\xf8\u1f24'
+
+>>> my_unicode.encode("ascii", "replace")
+'Hi ??????'
+>>> my_unicode.encode("ascii", "ignore")
+'Hi '
+>>> my_unicode.encode("ascii", "xmlcharrefreplace")
+'Hi &#8473;&#436;&#9730;&#8460;&#248;&#7972;'
+>>>
+
+```
+
+# Encoding and Decoding in Python 3
+Python3 will not implicitly change bytes <-> unicode
+unicode.encode() --> bytes (example: utf-8)
+bytes.decode() --> unicode
+```
+>>> my_string = "Hi \u2119\u01b4\u2602\u210c\xf8\u1f24"
+>>> type(my_string)
+<class 'str'>
+>>> my_bytes = b"Hello World"
+>>> type(my_bytes)
+<class 'bytes'>
+>>> "Hello " + b"World"
+Traceback (most recent call last):
+  File "<pyshell#4>", line 1, in <module>
+    "Hello " + b"World"
+TypeError: must be str, not bytes
+>>> "Hello" == b"Hello"
+False
+>>> d = {"Hello": "world"}
+>>> d[b"Hello"]
+Traceback (most recent call last):
+  File "<pyshell#7>", line 1, in <module>
+    d[b"Hello"]
+KeyError: b'Hello'
+>>>
+```
+
+# Encoding and Decoding Pro-Tips
+https://nedbatchelder.com/text/unipain.html
+Pro-Tip 1. Bytes on the outside, unicode on the inside. Encode/decode at the edges
+bytes byte bytes bytes
+decode
+unicode unicode
+unicode unicode
+encode
+bytes bytes bytes bytes
+Pro-Tip 2. Know what you have. Bytes or Unicode. If bytes, what encoding
+Pro-Tip 3. Test ȧƈƈḗƞŧḗḓ ŧḗẋŧ ƒǿř ŧḗşŧīƞɠ, ℛℯα∂α♭ℓℯ ♭ʊ☂ η☺т Ѧ$☾ℐℐ, ¡ooʇ ןnɟǝsn sı uʍop-ǝpısdn
+
+# Encoding and Decoding Facts of Life
+1. I/O is always bytes
+2. Need more than 256 symbols
+3. Need both bytes and unicode
+4. Can't infer encodings
+5. Declared encodings can be wrong
+
+
 # Strings
 ```
 for pl, sc in zip(players, scores):
