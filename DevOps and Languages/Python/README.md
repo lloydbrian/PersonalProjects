@@ -1,7 +1,9 @@
 # All About Python
+
 This is a quick guide of the learned Python concepts.
 
 ## Where to install
+
 Official site of Python is in [Python](https://www.python.org/).
 
 ```

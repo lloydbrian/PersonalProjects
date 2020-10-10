@@ -109,3 +109,14 @@ To extract
 ```
 tar -jxvf archive_name.tar.bz2
 ```
+
+## Cleanup after Uninstall
+Run these commands to perform further clean-up
+```
+~Library/Application Support
+~Library/Caches
+~Library/Logs
+~Library/Preferences
+~Library/Containers
+~Library/Cookies
+```
