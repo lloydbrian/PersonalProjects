@@ -111,7 +111,7 @@ tar -jxvf archive_name.tar.bz2
 ```
 
 ## Cleanup after Uninstall
-Run these commands to perform further clean-up
+Run delete commands on these folders to perform further clean-up
 ```
 ~Library/Application Support
 ~Library/Caches
@@ -119,4 +119,11 @@ Run these commands to perform further clean-up
 ~Library/Preferences
 ~Library/Containers
 ~Library/Cookies
+~/Library/LaunchAgents
+```
+
+## To generate traffic
+```
+sudo apt update
+sudo apt install apache2-utils -y
 ```
