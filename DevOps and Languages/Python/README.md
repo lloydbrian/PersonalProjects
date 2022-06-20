@@ -10,15 +10,16 @@ Official site of Python is in [Python](https://www.python.org/).
 https://www.python.org/downloads/
 ```
 
-
 ## Key Learned Concepts
 
 * Coding Style. Use [pycodestyle](https://pypi.org/project/pycodestyle/ ). Install using pip.
+
 ```
-$ pip install pycodestyle
+pip install pycodestyle
 ```
 
 * Running a Python code to test
+
 ```
 Python Shell
 pythontutor.com
@@ -26,8 +27,10 @@ unittest class
 ```
 
 # Encoding and Decoding in Python 2
+
 unicode.encode() --> bytes
 bytes.decode() --> unicode
+
 ```
 >>> my_unicode = u"Hi \u2119\u01b4\u2602\u210c\xf8\u1f24"
 >>> type(my_unicode)
@@ -55,9 +58,11 @@ u'Hi \u2119\u01b4\u2602\u210c\xf8\u1f24'
 ```
 
 # Encoding and Decoding in Python 3
+
 Python3 will not implicitly change bytes <-> unicode
 unicode.encode() --> bytes (example: utf-8)
 bytes.decode() --> unicode
+
 ```
 >>> my_string = "Hi \u2119\u01b4\u2602\u210c\xf8\u1f24"
 >>> type(my_string)
@@ -82,7 +87,7 @@ KeyError: b'Hello'
 ```
 
 # Encoding and Decoding Pro-Tips
-https://nedbatchelder.com/text/unipain.html
+<https://nedbatchelder.com/text/unipain.html>
 Pro-Tip 1. Bytes on the outside, unicode on the inside. Encode/decode at the edges
 bytes byte bytes bytes
 decode
@@ -94,14 +99,15 @@ Pro-Tip 2. Know what you have. Bytes or Unicode. If bytes, what encoding
 Pro-Tip 3. Test ȧƈƈḗƞŧḗḓ ŧḗẋŧ ƒǿř ŧḗşŧīƞɠ, ℛℯα∂α♭ℓℯ ♭ʊ☂ η☺т Ѧ$☾ℐℐ, ¡ooʇ ןnɟǝsn sı uʍop-ǝpısdn
 
 # Encoding and Decoding Facts of Life
+
 1. I/O is always bytes
 2. Need more than 256 symbols
 3. Need both bytes and unicode
 4. Can't infer encodings
 5. Declared encodings can be wrong
 
-
 # Strings
+
 ```
 for pl, sc in zip(players, scores):
     print ("Player :  %s     Score : %d" %(pl, sc))
@@ -115,8 +121,11 @@ Graph a point at where x=0 and y=10
 ```
 
 # Variables and Multiple Assignment
+
 # Arithmetic Operators
+
 # Placeholder in Strings
+
 ```
 (mydevenv) Lloyds-MB-Pro:workspace lloydbrian$ python
 Python 3.6.6 (v3.6.6:4cf1f54eb7, Jun 26 2018, 19:50:54)
@@ -140,8 +149,11 @@ Type "help", "copyright", "credits" or "license" for more information.
 ```
 
 # DataStructures
+
 ## Dictionaries
+
 ## Tuples (Immutable compared to List that are Mutable)
+
 ```
 >>> tup1 = ("apples", "oranges", "grapes")
 >>> tup1[0]
@@ -159,12 +171,15 @@ TypeError: 'tuple' object does not support item assignment
 >>> tup3
 ('apples', 'oranges', 'grapes', 'chicken', 'beef')
 ```
+
 # Conditional Operators
+
 ```
 ==, >=, <=, !=, >, <
 ```
 
 # Looping
+
 ```
 while():
   continue
@@ -173,6 +188,7 @@ while():
 ```
 
 # Functions and Built-In Functions
+
 ```
 abs()
 bool()
@@ -209,18 +225,24 @@ def sample_function(a, b):
 ```
 
 # Comprehensions
+
 ## Lists
+
 ```
 my_dict = [1,2,3,4,5]
 y = [2*i for i in my_dict]
 print(y)
 ```
+
 ## Dictionaries
+
 ```
 my_dict = {1:"1", 2:"2", 3:"3"}
 print({value:key for key, value in my_dict.items()})
 ```
+
 ## Sets
+
 ```
 my_dict = [1,2,1,2,3,4,1,1,3,4,5]
 my_set = set(my_dict)
@@ -232,8 +254,10 @@ my_set = {x for x in my_dict}
 ```
 
 # Exception Handling
+
 else executes if there are no errors
 finally always executes
+
 ```
 try:
   1/0
@@ -246,6 +270,7 @@ finally:
 ```
 
 # Classes
+
 class ClassName(*objects): //object is what the class is based on or inhering from, base class or parent class
   def __init__(self):
     //"""Constructore"""
@@ -255,6 +280,7 @@ if __name__ == "__main__": // only run the code if this code is executed as a st
   pass
 
 ## SubClasses
+
 class Car(Vehicle):
     """
     The Car class
@@ -274,6 +300,7 @@ if __name__ == "__main__":
     "I'm driving a yellow car!"
 
 # Object-Oriented Programming
+
 Classes and Objects (instance of the Class)
 init method initializes the variables
 
@@ -362,7 +389,9 @@ Overrided by the child class
 ```
 
 # Input/Output
+
 ## Files
+
 ```
 Python 3.6.6 (v3.6.6:4cf1f54eb7, Jun 26 2018, 19:50:54)
 [GCC 4.2.1 Compatible Apple LLVM 6.0 (clang-600.0.57)] on darwin
@@ -460,7 +489,9 @@ except IOError:
 ```
 
 # Sample Libraries
+
 ## Introspection
+
 ```
 type
 dir
@@ -468,8 +499,10 @@ help
 ```
 
 ## CSV module
+
 1. reader function
 2. DictReader class
+
 ```
 //Sample
 import csv
@@ -529,6 +562,7 @@ if __name__ == "__main__":
 ```
 
 ## Config Parser
+
 ```
 import configparser
 
@@ -786,6 +820,7 @@ if __name__ == "__main__":
 ```
 
 ## OS Module
+
 ```
 os.name
 os.environ
@@ -959,8 +994,11 @@ if __name__ == "__main__":
 ```
 
 ## SQLite Modules
+
 ### Create a Database and Insert Data
-SQLite only supports five data types: null, integer, real, text and blob. 
+
+SQLite only supports five data types: null, integer, real, text and blob.
+
 ```
 import sqlite3
 
@@ -993,6 +1031,7 @@ conn.commit()
 ```
 
 ### Updating and Deleting Records
+
 ```
 import sqlite3
 
@@ -1008,6 +1047,7 @@ cursor.execute(sql)
 conn.commit()
 
 ```
+
 ...
 
 ```
@@ -1025,6 +1065,7 @@ conn.commit()
 ```
 
 ### Basic Queries
+
 ```
 import sqlite3
 
@@ -1049,7 +1090,9 @@ print(cursor.fetchall())
 ```
 
 ## The call function
+
 from the subprocess module used to call another program. Think about forking another program
+
 ```
 >>> import subprocess
 >>> subprocess.call("notepad.exe")
@@ -1065,6 +1108,7 @@ Success!
 ```
 
 ### Popen class
+
 ```
 >>> program = "notepad.exe"
 >>> process = subprocess.Popen(program)
@@ -1072,7 +1116,9 @@ Success!
 >>> print(code)
 0
 ```
+
 Communicating with the process
+
 ```
 args = ["ping", "www.yahoo.com"]
 process = subprocess.Popen(args, stdout=subprocess.PIPE)
@@ -1083,6 +1129,7 @@ for line in data:
 ```
 
 ## The sys module
+
 ```
 Samples are:
 sys.argv
@@ -1093,8 +1140,11 @@ sys.path
 sys.platform
 sys.stdin/stdout/stderr
 ```
- ### sys.arg
+
+### sys.arg
+
 Python list of command line arguments passed to the python script. First arg is the name of the script.
+
 ```
 >>> import sys
 >>> sys.argv
@@ -1102,7 +1152,9 @@ Python list of command line arguments passed to the python script. First arg is 
 ```
 
 ### sys.executable
+
 is the absolute path of the Python interpreter
+
 ```
 >>> import sys
 >>> sys.executable
@@ -1110,17 +1162,24 @@ is the absolute path of the Python interpreter
 ```
 
 ### sys.exit
+
 ### sys.path
+
 list of strings that specifies the search path of modules
+
 ```
 >>> import sys
 >>> print(sys.path)
 ```
+
 ### sys.platform
+
 ### sys.stdin, stdout, stderr
+
 correspond to the interpreter's standard input, output, and error streams
 
 ## The threading module
+
 ```
 import random
 import time
@@ -1158,6 +1217,7 @@ if __name__ == "__main__":
 ```
 
 ### Thread downloader
+
 ```
 import os
 import urllib.request
@@ -1208,7 +1268,9 @@ if __name__ == "__main__":
 ```
 
 ### Using queues
+
 FIFO or LILO
+
 ```
 import os
 import threading
